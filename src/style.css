@@ -1,0 +1,259 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+	padding: 3dvh 0px;
+	font-family: "Roboto", sans-serif;
+	color: white;
+    background-color: black;
+}
+
+.container {
+	height: 94dvh;
+	width: 500px;
+	margin: auto;
+	padding: 50px;
+	background-color: #0093E9;
+	background-image: linear-gradient(160deg, #0093E9 0%, #75e6d8 100%);
+
+	background-color: #0093E9;
+	background-image: linear-gradient(300deg, #0093E9 0%, #75e6d8 100%);
+
+	border-radius: 75px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* HEADER */
+
+header {
+	font-size: 1.5rem;
+	height: 45px;
+	margin-top: 20px;
+	display: flex;
+	gap: 10px;
+	user-select: none;
+}
+.search {
+	width: 350px;
+	padding: 0px 20px;
+	background-color: white;
+	border-radius: 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px, rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+	cursor: pointer;
+}
+#searchBtn {
+	display: grid;
+	place-items: center;
+	user-select: none;
+}
+#searchBtn:active{
+	transform: scale(0.8);
+}
+.search svg {
+	height: 25px;
+	fill: grey;
+}
+input {
+	font-size: 1.25rem;
+	height: 42px;
+	width: 100%;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+input:focus {
+	outline: none;
+}
+#toggle {
+	color: black;
+	font-size: 1.5rem;
+	font-weight: bold;
+	width: 45px;
+	background-color: white;
+	border: none;
+	border-radius: 25px;
+	box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+	display: grid;
+	place-content: center;
+	user-select: none;
+	cursor: pointer;
+	transition: transform 0.1s linear, background-color 0.2s ease-in;
+}
+#toggle:hover {
+	background-color: #70ddd8;
+	box-shadow: rgba(0, 0, 0, 0.116) 3px 3px 6px 0px inset, rgba(0, 0, 0, 0) -3px -3px 6px 1px inset;
+}
+#toggle:active {
+	transform: translateY(5px);
+}
+
+/* Main */
+
+main {
+	height: 400px;
+	width: 300px;
+	font-size: 3rem;
+	user-select: none;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0px;
+	position: relative;
+	bottom: 50px;
+}
+#location {
+	margin-top: 20px;
+	font-size: 2rem;
+}
+.temperature {
+	position: relative;
+}
+.temp {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 20px;
+}
+#tempValue {
+	font-size: 7rem;
+	margin-top: 20px;
+}
+.temp img {
+	width: 25px;
+	margin-bottom: 20px;
+}
+#feels {
+	font-size: 1.25rem;
+}
+.feels {
+	margin-left: 25px;
+	position: relative;
+	bottom: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+.feels img {
+	width: 10px;
+	margin-bottom: 5px;
+}
+
+/* Footer */
+
+footer {
+	font-size: 1.5rem;
+	height: 150px;
+	user-select: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.details {
+	display: flex;
+	align-items: center;
+}
+.details span{
+	font-size: 3.5rem;
+}
+.details img{
+	width: 150px;
+	margin-right: -20px;
+}
+.humid img {
+	margin-left: -40px;
+}
+.wind img {
+	margin-left: -10px;
+}
+
+/* Made By */
+
+#madeBy {
+	font-size: 0.9rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	position: absolute;
+	top: 100%;
+	user-select: none;
+}
+#madeBy a{
+	color: white;
+}
+#madeBy svg {
+	width: 21px;
+	fill: white;
+}
+
+/* Media Queries */
+
+@media screen and (width <= 500px) {
+	.container{
+		width: 98vw;
+	}
+	header {
+		width: 80vw;
+	}
+	main {
+		scale: 0.75;
+	}
+	#madeBy {
+		width: 100vw;
+		font-size: 0.75rem;
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (width <= 375px) {
+	main {
+		padding-top: 40px;
+	}
+	.details span{
+		font-size: 2.5rem;
+	}
+	.details img {
+		width: 125px;
+	}
+	footer {
+		margin-bottom: -50px;
+	}
+}
+
+@media screen and (height <= 700px) {
+	main {
+		height: 55vh;
+	}
+}
